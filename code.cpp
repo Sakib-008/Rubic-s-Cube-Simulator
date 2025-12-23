@@ -79,5 +79,57 @@ int main()
                 cube[0][3] = t2;
             }
         }
+        else{
+            if( f == 0){
+                char t0 = cube[0][1];
+                char t1 = cube[0][2];
+                char t2 = cube[0][3];
+                char t3 = cube[0][4];
+                cube[0][1] = cube[5][1];
+                cube[0][2] = cube[5][2];
+                cube[0][3] = cube[5][3];
+                cube[0][4] = cube[5][4];
+                cube[5][0] = cube[4][0];
+                cube[5][1] = cube[4][1];
+                cube[5][2] = cube[4][2];
+                cube[5][3] = cube[4][3];
+                cube[4][0] = cube[3][0];
+                cube[4][1] = cube[3][1];
+                cube[4][2] = cube[3][2];
+                cube[4][3] = cube[3][3];
+                cube[3][1] = t0;
+                cube[3][2] = t1;
+                cube[3][3] = t2;
+                cube[3][4] = t3;
+            } else if(f == 1) {
+                char t0 = cube[3][1];
+                char t1 = cube[3][2];
+                char t2 = cube[3][3];
+                char t3 = cube[3][4];
+                cube[3][0] = cube[4][0];
+                cube[3][1] = cube[4][1];
+                cube[3][2] = cube[4][2];
+                cube[3][3] = cube[4][3];
+                cube[4][0] = cube[5][0];
+                cube[4][1] = cube[5][1];
+                cube[4][2] = cube[5][2];
+                cube[4][3] = cube[5][3];
+                cube[5][0] = cube[0][0];
+                cube[5][1] = cube[0][1];
+                cube[5][2] = cube[0][2];
+                cube[5][3] = cube[0][3];
+                cube[0][1] = t0;
+                cube[0][2] = t1;
+                cube[0][3] = t2;
+                cube[0][4] = t3;
+            }
+        }
+    }
+
+    for(int i=0;i<4;i++){
+        for(int j=0;j<6;j++){
+            cout<<cube[j][i]<<" ";
+        }
+        cout<<endl;
     }
 }
